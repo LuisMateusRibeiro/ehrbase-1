@@ -17,8 +17,8 @@
 spring:
   datasource:
     url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASS}
+    username: ${DB_USER_ADMIN}
+    password: ${DB_PASS_ADMIN}
     hikari:
       maximum-pool-size: 50
       max-lifetime: 1800000
