@@ -20,7 +20,7 @@
  */
 
 CREATE TABLE ehr.plugin (
-	id UUid PRIMARY KEY DEFAULT ext.uuid_generate_v4(),
+	id UUid PRIMARY KEY DEFAULT uuid_generate_v4(),
 	pluginId TEXT NOT NULL,
 	key TEXT NOT NULL,
 	value TEXT

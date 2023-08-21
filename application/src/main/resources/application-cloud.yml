@@ -1,16 +1,16 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/ehrbase
-    username: ehrbase_restricted
-    password: ehrbase_restricted
+    url: jdbc:postgresql://c-cosmosdb.ofqt4ngm4dbcuv.postgres.cosmos.azure.com:5432/citus
+    username: citus
+    password: GFG7Q4204P0HM35A$
     hikari:
       maximum-pool-size: 50
       max-lifetime: 1800000
       minimum-idle: 10
   flyway:
     schemas: ehr
-    user: ehrbase
-    password: ehrbase
+    user: citus
+    password: GFG7Q4204P0HM35A$
 
 security:
   authType: NONE

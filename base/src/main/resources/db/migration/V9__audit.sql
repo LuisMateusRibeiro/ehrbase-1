@@ -18,7 +18,7 @@
 
 -- First, add new audit_details table containing audit data columns
 CREATE TABLE ehr.audit_details (
-    id UUID primary key DEFAULT ext.uuid_generate_v4(),
+    id UUID primary key DEFAULT uuid_generate_v4(),
     system_id UUID references ehr.system(id),
     committer UUID references ehr.party_identified(id),
     time_committed timestamp default NOW(),

@@ -35,7 +35,7 @@ ALTER TABLE ehr.audit_details
 -- needs to be explicit table, instead of being embedded attribute in attestation table, because can't "references" to different table's IDs
 -- necessary because all versioned objects are valid values, but are implemented in their own table (without inheritance)
 CREATE TABLE ehr.attestation_ref (
-    ref UUID primary key DEFAULT ext.uuid_generate_v4() -- ref key to allow many-relationship
+    ref UUID primary key DEFAULT uuid_generate_v4() -- ref key to allow many-relationship
 );
 
 -- Also modify attestation (sub-class of audit_details) table

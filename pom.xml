@@ -54,11 +54,11 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- PostgreSQL Database Properties -->
-        <database.host>localhost</database.host>
+        <database.host>c-cosmosdb.ofqt4ngm4dbcuv.postgres.cosmos.azure.com</database.host>
         <database.port>5432</database.port>
-        <database.user>ehrbase</database.user>
-        <database.pass>ehrbase</database.pass>
-        <database.name>ehrbase</database.name>
+        <database.user>citus</database.user>
+        <database.pass>GFG7Q4204P0HM35A$</database.pass>
+        <database.name>citus</database.name>
         <test.profile>unit</test.profile>
     </properties>
 
