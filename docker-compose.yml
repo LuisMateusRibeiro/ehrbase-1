@@ -10,28 +10,14 @@ services:
     env_file:
       - .env.ehrbase
     environment:
-      DB_URL: jdbc:postgresql://ehrdb:5432/ehrbase
-      DB_USER_ADMIN: ehrbase
-      DB_PASS_ADMIN: ehrbase
-      DB_USER: ehrbase_restricted
-      DB_PASS: ehrbase_restricted
+      DB_URL: jdbc:postgresql://ehrbase-open-postgres-sandbox.postgres.database.azure.com:5432/postgres
+      DB_USER_ADMIN: postgres
+      DB_PASS_ADMIN: UKWT0Q0W2QL1G3X5$
+      DB_USER: postgres
+      DB_PASS: UKWT0Q0W2QL1G3X5$
     restart: on-failure
 
-  ehrdb:
-    image: ehrbase/ehrbase-postgres:13.4.v2
-    ports:
-      - 5432:5432
-    networks:
-      - ehrbase-net
-    volumes:
-      - ./.pgdata:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      EHRBASE_USER_ADMIN: ehrbase
-      EHRBASE_PASSWORD_ADMIN: ehrbase
-      EHRBASE_USER: ehrbase_restricted
-      EHRBASE_PASSWORD: ehrbase_restricted
+
 
 networks:
   ehrbase-net: {}
